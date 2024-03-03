@@ -1,9 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        var email = document.getElementById("email").value;
-        if (email === "") {
-            alert("Please enter your email address.");
-            event.preventDefault(); // Prevent form submission
+function toggleSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        if (section.id === sectionId) {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
         }
     });
-});
+}
